@@ -2,3 +2,30 @@
     display: flex;
     justify-content: center;
 }
+
+.outer-container{
+    background-color: rgba(128, 128, 128, 0.651);
+    height: 500px;
+    width: 500px;
+    border-radius: 20px;
+    border: 3px solid;
+    box-shadow: 20px 20px 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.input-container{
+    padding: 15px;
+}
+
+.submit-button button{
+    padding: 15px;
+    border-radius: 15px;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 350px;
+}
