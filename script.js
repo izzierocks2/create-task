@@ -45,8 +45,8 @@ button.addEventListener('click', () => {
 });
 
 // End the game function
-function endGame() {
-    scoreContainer.textContent = "Final Score: " + score;  // Displays final score
+function endGame(finalScore) {
+    scoreContainer.textContent = "Final Score: " + finalScore;  // Displays final score
     question.textContent = "Congratulations, play again!"; // Displays the final message
     input.style.display = "none";  // Hides the input field
     button.style.display = "none"; // Hides the submit button
