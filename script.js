@@ -2,6 +2,17 @@
 let questionList = ['Who won the 2022 NBA Championship?', 'Who won the 2025 March Madness Mens Tournament?', 'Who wrote the play "Romeo and Juliet"?', 'Who painted the Mona Lisa?', 'What is the largest ocean?'];
 let answerList = ['Golden State Warriors', 'Florida Gators', 'William Shakespeare', 'Leonardo da Vinci', 'Pacific Ocean'];
 
+function checkAnswer(userInput, correctAnswer) {
+    return userInput.trim().toLowerCase() === correctAnswer.toLowerCase();
+}
+
+function printAllQuestions(list) {
+    for (let i = 0; i < list.length; i++) {
+        console.log(`Question ${i + 1}: ${list[i]}`);
+    }
+}
+printAllQuestions(questionList);
+
 let score = 0; //Initial score
 let questionIndex = 0; //Starts with the first question
 
@@ -20,7 +31,7 @@ button.addEventListener('click', () => {
     if(questionIndex >= questionList.length) return;
 
     //Check if the answer is correct and updates the score accordingly
-    if(input.value.trim().toLowerCase() === answerList[questionIndex].toLowerCase()){
+    if (checkAnswer(input.value, answerList[questionIndex])) {
         score += 1; //Correct answer
     } else {
         score -= 1; //Incorrect answer
@@ -34,7 +45,7 @@ button.addEventListener('click', () => {
 
     //If there are no more questions, end the game
     if(questionIndex >= questionList.length) {
-        endGame();
+        endGame(score);
     } else {
         //Show the next question
         question.textContent = questionList[questionIndex];
