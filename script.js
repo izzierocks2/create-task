@@ -2,25 +2,22 @@
 let questionList = ['Who won the 2022 NBA Championship?', 'Who won the 2025 March Madness Mens Tournament?', 'Who wrote the play "Romeo and Juliet"?', 'Who painted the Mona Lisa?', 'What is the largest ocean?'];
 let answerList = ['Golden State Warriors', 'Florida Gators', 'William Shakespeare', 'Leonardo da Vinci', 'Pacific Ocean'];
 
-/*function checkAnswer(userInput, correctAnswer) {
-    return userInput.trim().toLowerCase() === correctAnswer.toLowerCase();
-}*/
 
 function checkAnswer(userInput, correctAnswer) {
     let user = userInput.trim().toLowerCase();
     let correct = correctAnswer.toLowerCase();
 
     if(user.length !== correct.length) {
-        return false; //Selection
+        return false; 
     }
 
-    for (let i = 0; i < user.length; i++) { //Iteration
-        if (user[i] !== correct[i]) { //Selection
+    for (let i = 0; i < user.length; i++) {  //Iteration
+        if (user[i] !== correct[i]) {  //Selection
             return false;
         }
     }
 
-    return true; //Sequencing
+    return true;  //Sequencing
 }
 
 function printAllQuestions(list) {
